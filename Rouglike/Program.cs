@@ -31,5 +31,25 @@ internal static class Program
         Console.WriteLine();
         Console.WriteLine("Naciśnij dowolny klawisz żeby zakończyć...");
         Console.ReadKey(true);
+
+        string[] poziom =
+        [
+            "#########",
+            "#    #  #",
+            "#   ##  #",
+            "#    #  #",
+            "#    #  #",
+            "#       #",
+            "#    #  #",
+            "#########"
+        ];
+
+        Console.Clear();
+        Console.WriteLine("Chcesz zobaczyć mapę? Naciskaj dowolny przycisk aż się pojawi w całości.");
+        foreach (var rząd in poziom)
+        {
+            Console.ReadKey(true);
+            Console.WriteLine(rząd);
+        }
     }
 }
