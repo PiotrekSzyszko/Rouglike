@@ -13,7 +13,7 @@ internal static class Program
             imię = "Nieznajomy";
             Console.WriteLine($"W takim razie będę nazywał Cię {imię}...");
         }
-        else if (imię is "Nieznajomy" or "nieznajomy")
+        else if (imię.ToLower() is  "nieznajomy")
         {
             Console.WriteLine("Wiedziałem, że masz tak na imię!");
         }
@@ -30,6 +30,6 @@ internal static class Program
         
         Console.WriteLine();
         Console.WriteLine("Naciśnij dowolny klawisz żeby zakończyć...");
-        Console.ReadKey();
+        Console.ReadKey(true);
     }
 }
