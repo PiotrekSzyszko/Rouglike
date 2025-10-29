@@ -10,19 +10,23 @@ internal static class Program
         var imię = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(imię))
         {
-            imię = "Paziu";
-            Console.WriteLine($"Będę Cię w takim razie nazywał {imię}...");
+            imię = "Nieznajomy";
+            Console.WriteLine($"W takim razie będę nazywał Cię {imię}...");
         }
-        
-        
+        else if (imię is "Nieznajomy" or "nieznajomy")
+        {
+            Console.WriteLine("Wiedziałem, że masz tak na imię!");
+        }
+
+
         Console.WriteLine($"Skąd jesteś {imię}?");
         var miejsce = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(miejsce))
         {
-            Console.WriteLine("Nie jesteś typem gaduły");
+            Console.WriteLine("Nie jesteś typem gaduły.");
             miejsce = "Nikąd";
         }
-        Console.WriteLine($"Witaj cichy {imię} z {miejsce}.");
+        Console.WriteLine($"Witaj {imię} z {miejsce}.");
         
         Console.WriteLine();
         Console.WriteLine("Naciśnij dowolny klawisz żeby zakończyć...");
